@@ -190,7 +190,22 @@ left: 1.6%;
         flex-direction: column;
         justify-content: center;
     }
+    .rules{
+        width: 60%;
+        top: 5%;
+    }
 }
+@media (orientation: portrait) {
+    body{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .rules{
+        width: 40%;
+        top: 5%;
+    }
+}
+
 
 .cafedesdevs{
     position: absolute;
