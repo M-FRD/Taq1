@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Holtwood+One+SC&display=swap');
+body{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+    background: center/cover url("http://lacolombiere74.fr/wp-content/uploads/2015/12/Bois-sombre.jpg") no-repeat;
+    font-family: 'Holtwood One SC', serif;
+    color: rgb(248, 221, 170);
+
+}
+.taquin,.preview{
+    position: relative;
+    margin-top: 10%;
+    width: 28rem;
+    height: 28rem;
+    border: solid 3rem;
+    border-image: url("https://www.vincentdufour.com/2472/cadre-30-30cm-nature-caisse-americaine.jpg") 80 ;
+    background: center / cover url("https://walter-bellini.com/wp-content/uploads/2018/10/bois-de-violette.jpg") no-repeat ;
+}
+.preview,.taquin.win{
+    background: center / cover url("https://picsum.photos/1000/1000") no-repeat ;
+}
+.taquin.win{
+    background: center / cover url("https://picsum.photos/1000/1000") no-repeat ;
+    animation: win .5s linear;
+}
+@keyframes win {
+    50%{
+        filter: brightness(1.5);
+    }
+}
+.boxes{
+    position: absolute;
+    box-sizing: border-box;
+    height: 23%;
+    width: 23%;
+    border: .15rem solid rgb(41, 27, 0);
+    background-image: url("https://picsum.photos/1000/1000");
+    background-size: 400%;
+    background-repeat: no-repeat;
+    transition: top .5s, left .5s, transform .2s, border .2s;
+}
+.boxes.true{
+    border: .15rem solid rgb(201, 248, 170);
+}
+.boxes.false{
+    border: .15rem solid rgb(248, 170, 170); 
+}
+.boxes.win{
+    display: none;
+}
+.help{
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+#helper{
+    position: relative;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin-top: 1rem;
+    border-radius: 100rem;
+    cursor: pointer;
+    outline: none;
+    width: 4rem;
+    height: 1.5rem;
+    background-color: rgb(248, 221, 170);
+    transition: background-color .5s;
+}
+#helper:checked{
+    background-color: rgb(201, 248, 170);
+}
+#helper::before{
+    content: "";
+    left: 20%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    height: 1.2rem;
+    width: 1.2rem;
+    border-radius: 100%;
+    background-color: white;
+        transition: transform .5s;
+}
+#helper:checked::before{
+    transform: translate(150%,-50%);
+}
+.rules{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin: 1rem;
+    font-size: .7rem;
+}
+.rules p {
+    margin: .5rem;
+}
+.rules h2{
+    text-align: center;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+
+}
+.boxes:hover{
+    transform: scale(1.05);
+}
+[row="1"]{
+    top: 1.6%; 
+}
+[row="2"]{
+   top: 26.2%; 
+}
+[row="3"]{
+    top: 50.8%; 
+ }
+[row="4"]{
+     top: 75.4%; 
+ }
+[column = "1"]{
+left: 1.6%;
+}
+[column = "2"]{
+    left: 26.2%;
+}
+[column = "3"]{
+    left: 50.8%;
+}
+[column = "4"]{
+    left: 75.4%;
+}
+
+#img1{
+    background-position: 0% 0% ;
+}
+#img2{
+    background-position: 33.3% 0;
+}
+#img3{
+    background-position: 66.6% 0;
+}
+#img4{
+    background-position: 100% 0;
+}
+#img5{
+    background-position: 0% 33.3%;
+}
+#img6{
+    background-position: 33.3% 33.3%;
+}
+#img7{
+    background-position: 66.6% 33.3%;
+}
+#img8{
+    background-position: 100% 33.3%;
+}
+#img9{
+    background-position: 0 66.6%;
+}
+#img10{
+    background-position: 33.3% 66.6%;
+}
+#img11{
+    background-position: 66.6% 66.6%;
+}
+#img12{
+    background-position: 100% 66.6%;
+}
+#img13{
+    background-position: 0 100%;
+}
+#img14{
+    background-position: 33.3% 100%;
+}
+#img15{
+    background-position: 66.6% 100%;
+}
+#img16{
+    background:transparent;
+    border: none;
+}
+@media (orientation: portrait) {
+    body{
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+.cafedesdevs{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 8rem;
+    height: 8rem;
+    opacity: 0;
+}
