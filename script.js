@@ -5,10 +5,20 @@ const HELPER = document.querySelector('#helper')
 
 window.addEventListener('load',()=>{
     document.querySelector('html').style.fontSize = window.innerWidth /100 + "px"
+    if ( screen.orientation.type === 'portrait-primary' || screen.orientation.type === 'portrait-secondary'){
+        document.querySelector('html').style.fontSize = (window.innerWidth + window.innerHeight) /170 + "px"
+    }
 })
 window.addEventListener('resize',()=>{
     document.querySelector('html').style.fontSize = window.innerWidth /100 + "px"
+    if ( screen.orientation.type === 'portrait-primary' || screen.orientation.type === 'portrait-secondary'){
+        document.querySelector('html').style.fontSize = (window.innerWidth + window.innerHeight) /170 + "px"
+    }
 })
+
+if ( screen.orientation.type === 'portrait-primary' || screen.orientation.type === 'portrait-secondary'){
+    document.querySelector('html').style.fontSize = window.innerWidth /15 + "px"
+}
 // Positions aléatoires
 let Myid = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16"]
 BOXES.forEach(Box => {
